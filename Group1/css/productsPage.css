@@ -1,0 +1,120 @@
+/* ======================= [ HEADER SECTION ] ============================================= */
+
+#headerNavBar .form-control,#headerNavBar .btn{
+    border: 1px solid black  !important;
+    border-radius: 0px !important;
+    color: black;
+}
+
+#headerNavBar .btn{
+    background-color: black;
+    color: white;
+    transition: 300ms;
+}
+
+#headerNavBar .btn:hover{
+    background-color: rgb(255, 255, 255) !important;
+    color: black;
+    transition: 300ms;
+
+}
+
+.form-control:focus {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.2rem rgba(63, 103, 72, 0.25) !important;
+} 
+
+
+#headerNavBar .nav-item:hover{
+    background-color: rgb(230, 213, 213);
+}
+#productsPageBody #headerContainer{
+    box-shadow: 0px 0px 1px black;
+}
+
+#loggedImage{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: rgb(235, 221, 221);
+}
+
+
+/* ====================================================================================== */
+
+/* ======================= [ Exit Mark ] ============================================== */
+#exitMark{
+    text-decoration: none;
+    color: white;
+    width: 4rem;
+    text-align: center;
+    padding: 0px;
+    background-color: black;
+    border-radius: 0.2rem;
+    transition: 300ms;
+}
+
+#exitMark:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(236, 0, 0);
+    transition: 300ms;
+}
+
+/* ================================================================================================================================= */
+
+#bodyFilterProducts #bodyProducts{
+    overflow: auto;
+}
+
+.card .card-body{
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+}
+
+.card{
+    border: none !important;
+    background-color: rgb(248, 240, 240) !important;
+    border-radius: 0px;
+    opacity: 0.9;
+    transition: 200ms;
+}
+
+.card:hover{
+    opacity: 1;
+    transition: 200ms;
+}
+
+
+.card .btn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0px;
+}
+.card .btn:hover{
+    background-color: rgb(29, 15, 79);
+}
+
+#bodyFilter .list-group-item:hover{
+    transition: 300ms;
+}
+#bodyFilter .list-group-item:hover{
+    background-color: rgb(219, 199, 199);
+    transition: 300ms;
+
+}
+
+
+
+@media only screen and (max-width: 1000px) { 
+    #bodyFilter{ 
+      display: none !important; 
+    } 
+  }
+
+
+#bodyProducts img{
+    height: 20rem;
+    border-radius: 0px;
+}

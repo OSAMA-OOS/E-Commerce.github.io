@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peloton</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.css.map"> -->
+
+    <!-- link FontAwesome -->
+    <link rel="stylesheet" href="../css/fontAwesome.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+    <!-- ================================== [ HEADER SECTION ] =========================== -->
+    <div id="headerContainer" class="container-fluid" style="position: sticky; top: 0px; z-index: 1; background-color: white;">
+
+        <!-- first row on header [ banner ] -->
+        <div id="HeaderBanner" class="row bg-black text-white text-center p-2">
+            <div id="headerBannerContent" class="col-12 p-3">Content Banner</div>
+        </div>
+
+        <!-- Header Help section language and currency Section -->
+        <div id="headerHelp" class="row">
+            <div id="headerContent" class="col-12 d-flex justify-content-end">
+                <div id="headerContentHelp" class="btn">Help</div>
+                <div id="headerContentLocation" class="btn">Egypt</div>
+                <div id="headerContentCurrency" class="btn">EGP</div>
+                <div id="headerContentLanguage" class="btn">English</div>
+            </div>
+        </div>
+
+        <!-- Header Nav Bar Section -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary row" id="headerNavBar">
+            <div class="container-fluid ">
+
+                <!-- brand name -->
+                <a class="navbar-brand fs-1" href="../index.html">Peloton</a>
+
+
+                <!-- menu button that will appear in small width -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- this area collapse in small width and show menu button -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                                        <!-- search area and the search button -->
+                    <form class="d-flex ms-auto w-50" role="search">
+                        <input class="form-control me-3 " type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success nrmBrd" type="submit">Search</button>
+                    </form>
+
+
+                    <ul  class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        
+                        <li class="nav-item m-1" id="unLogged">
+                            <a  class="nav-link active" aria-current="page" href="#"><i class="fa-regular fa-user" style="color: #000000;"></i> Login</a>
+                        </li>
+                        <li class="nav-item m-1" id="logged">
+                            <a id="loggedLink" href="../html/accountPage.html" class="nav-link active" aria-current="page" href="../html/account.html">
+
+                                <!-- CODE MUST APPEAR HERE NEW PROFILE -->
+
+                            </a>
+                        </li>
+                        <li class="nav-item m-1">
+                            <a class="nav-link active" aria-current="page" href="#"><i class="fa-regular fa-heart" style="color: #000000;"></i> Favorite</a>
+                        </li>
+                        <li id="headerShoppingCartButton" class="nav-item m-1 position-relative">
+                            <a  class="nav-link active" aria-current="page"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></i></i> Shopping Cart<span id="addToCartBadge"  class="bg-black text-white position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                                <span class="visually-hidden">unread messages</span></a>
+                            
+                        </li>
+            
+                    </ul>
+            </div>
+
+            </div>
+          </nav>
+        
+    </div>
+        
+    <!-- =================================== [ BODY SECTION ] =========================== -->
+    <div id="cardsContainer"  class="container-fluid d-flex flex-wrap h-100 ">
+
+        <div class="card col-sm-12 col-md-12 border col-lg-6 border1 labtops h-30 " id="laptops"  value="laptops">
+            <img src="/media/image/wp8971473.jpg" class="card-img col-sm-4 col-md-4 h-100"  >
+            <button type="button" class=" btn btn-dark laptobsBtn  col-md-6 btn-lg position-absolute top-50 start-50 translate-middle"value="laptops">Laptops</button>
+        </div>
+
+        <div class="card col-sm-12 col-md-12 border h-30 col-lg-6 border1 fragrances" id="fragrances"  value="fragrances">
+            <img src="/media/image/fragrances.jpg" class="card-img col-sm-4 col-md-4 h-100"  >
+            <button type="button" class="btn btn-dark fragrancesBtn  col-md-6 d-sm-block btn-lg position-absolute top-50 start-50 translate-middle"value="fragrances">Fragrances</button>
+        </div>
+
+        <div class="card col-sm-12 col-md-12 border col-lg-6 border1 groceries h-30" id="groceries" value="groceries">
+            <img src="/media/image/groceries.jpg" class="card-img col-sm-4 col-md-4 h-100"  >
+            <button type="button" class="btn btn-dark groceriesBtn  col-md-6 btn-lg position-absolute top-50 start-50 translate-middle"value="groceries">Groceries</button>
+        </div>
+
+        <div class="card col-sm-12 col-md-12 border col-lg-6 border1 homeDecoration h-30" id="home-decoration" value="home-decoration">
+            <img src="/media/image/homeDecoration.jpg" class="card-img col-sm-4 col-md-4 h-100"  >
+            <button type="button" class="btn btn-dark homeBtn btn-lg position-absolute top-50 start-50 translate-middle col-md-6"value="home-decoration">Home Decoration</button>
+        </div>
+
+        <div class="card col-sm-12 col-md-12 border col-lg-6 border1 smartphone h-30" id="smartphones"  value="smartphones">
+            <img src="/media/image/istockphoto-1274394138-170667a.jpg" class="card-img col-sm-4 col-md-4 h-100"  >
+            <button type="button" class="btn btn-dark smartPhoneBtn  col-md-6 btn-lg position-absolute top-50 start-50 translate-middle"value="smartphones">Smart Phones</button>
+        </div>
+
+        <div class="card col-sm-12 col-md-12 border col-lg-6 border1 skinCare h-30" id="skincare" value="skincare">
+            <img src="/media/image/skinCare.jpg" class="card-img col-sm-4 col-md-4 h-100"  >
+            <button type="button" class="btn btn-dark skinCareBtn  col-md-6 btn-lg position-absolute top-50 start-50 translate-middle"value="skincare">Skin Care</button>
+        </div>
+    </div>
+    <div class="container-fluid mt-2 mb-4">
+        <button id="ShowAllProducts" type="button" class="btn btn-danger groceriesBtn col-12 p-4 " value="0">Show all Products</button>
+    </div>
+    <!-- ================================================================================= -->
+
+
+
+    <!-- ================================== [ FOOTER SECTION ] =========================== -->
+    <div class="container-fluid mt-5 w-100 bg-black">
+        <div class="row" style="width: 100%;">
+            <div class="container col-12 bg-black">
+                <div class="col-12 bg-black">
+        
+                <footer class="text-center text-lg-start text-white" style="background-color: #000">
+        
+                    <section class="d-flex justify-content-between p-4" style="background-color: #000">
+        
+                        <div class="me-5">
+                            <span>Get connected with us on social networks:</span>
+                        </div>
+        
+                        <div>
+                            <a href="" class="text-white me-4">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+        
+                    </section>
+        
+                    <section class="">
+                        <div class="container text-center text-md-start mt-5">
+        
+                            <div class="row mt-3">
+        
+                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        
+                                    <h6 class="text-uppercase fw-bold">Peloton</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #000; height: 2px" />
+                                    <p>
+                                        Online shopping is one of the most convenient and easy modes of shopping as users can
+                                        browse and choose products from a wide range without having to go to physical stores.
+                                    </p>
+                                </div>
+        
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        
+                                    <h6 class="text-uppercase fw-bold">Categories</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #000; height: 2px" />
+                                    <p>
+                                        <a href="#!" class="text-white">Smart Phone</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Laptops</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Fragrances</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Skincare</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Home Decoration</a>
+                                    </p>
+                                </div>
+        
+                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        
+                                    <h6 class="text-uppercase fw-bold">Useful links</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #000; height: 2px" />
+                                    <p>
+                                        <a href="#!" class="text-white">Your Account</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Become an Affiliate</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Shipping Rates</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">About us</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Help</a>
+                                    </p>
+                                </div>
+        
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        
+                                    <h6 class="text-uppercase fw-bold">Contact</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #000; height: 2px" />
+        
+                                    <p><i class="fas fa-envelope mr-3"></i> Peloton@gmail.com</p>
+                                    <p><i class="fas fa-phone mr-3"></i> + 01271927950</p>
+                                    <p><i class="fas fa-print mr-3"></i> + 01271927950</p>
+                                </div>
+        
+                            </div>
+        
+                        </div>
+                    </section>
+        
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                        © 2023 Copyright:
+                        <a class="text-white" href="">Peloton.com</a>
+                    </div>
+                </footer>
+            </div>
+    </div>
+        </div>
+    </div>
+    <!-- ================================================================================= -->
+
+
+
+    <script src="/js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+/* ======================= [ HEADER SECTION ] ============================================= */
+
+#headerNavBar .form-control,#headerNavBar .btn{
+    border: 1px solid black  !important;
+    border-radius: 0px !important;
+    color: black;
+}
+
+#headerNavBar .btn{
+    background-color: black;
+    color: white;
+    transition: 300ms;
+}
+
+#headerNavBar .btn:hover{
+    background-color: rgb(255, 255, 255) !important;
+    color: black;
+    transition: 300ms;
+
+}
+
+.form-control:focus {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.2rem rgba(63, 103, 72, 0.25) !important;
+} 
+
+
+#headerNavBar .nav-item:hover{
+    background-color: rgb(230, 213, 213);
+}
+#productsPageBody #headerContainer{
+    box-shadow: 0px 0px 1px black;
+}
+
+#loggedImage{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: rgb(235, 221, 221);
+}
+
+
+/* ====================================================================================== */
+
+/* ======================= [ Exit Mark ] ============================================== */
+#exitMark{
+    text-decoration: none;
+    color: white;
+    width: 4rem;
+    text-align: center;
+    padding: 0px;
+    background-color: black;
+    border-radius: 0.2rem;
+    transition: 300ms;
+}
+
+#exitMark:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(236, 0, 0);
+    transition: 300ms;
+}
+
+/* ================================================================================================================================= */
+#cardsContainer button{
+    background-color: rgba(0, 0, 0, 0.518);
+    border: 1px solid black ;
+    border-radius: 0px;
+    transition: 400ms;
+}
+#cardsContainer button:hover{
+    transition: 400ms;
+    color: white;
+    background-color: black;
+}
+
+#ShowAllProducts{
+    border-radius: 0px;
+    background-color: black;
+    color: white;
+    transition: 400ms;
+}
+#ShowAllProducts:hover{
+    color: black;
+    background-color: white;
+    transition: 400ms;
+}
+
+
+
+
+
+img
+{
+    transition:  0.5s;
+    border-radius: 0px !important;
+}
+img:hover {
+
+    opacity: .5  ;
+}
+

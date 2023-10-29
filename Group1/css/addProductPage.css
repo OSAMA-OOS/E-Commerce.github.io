@@ -1,0 +1,102 @@
+/* ======================= [ HEADER SECTION ] ============================================= */
+
+#headerNavBar .form-control,#headerNavBar .btn{
+    border: 1px solid black  !important;
+    border-radius: 0px !important;
+    color: black;
+}
+
+#headerNavBar .btn{
+    background-color: black;
+    color: white;
+    transition: 300ms;
+}
+
+#headerNavBar .btn:hover{
+    background-color: rgb(255, 255, 255) !important;
+    color: black;
+    transition: 300ms;
+
+}
+
+.form-control:focus {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 0 0.2rem rgba(63, 103, 72, 0.25) !important;
+} 
+
+
+#headerNavBar .nav-item:hover{
+    background-color: rgb(230, 213, 213);
+}
+#productsPageBody #headerContainer{
+    box-shadow: 0px 0px 1px black;
+}
+
+#loggedImage{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: rgb(235, 221, 221);
+}
+
+
+/* ====================================================================================== */
+
+/* ======================= [ Exit Mark ] ============================================== */
+#exitMark{
+    text-decoration: none;
+    color: white;
+    width: 4rem;
+    text-align: center;
+    padding: 0px;
+    background-color: black;
+    border-radius: 0.2rem;
+    transition: 300ms;
+}
+
+#exitMark:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(236, 0, 0);
+    transition: 300ms;
+}
+
+/* ================================================================================================================================= */
+.emailSign,.passSign,.regist{
+    padding: 20px 15px 0px 15px !important;
+    height: 75px!important;
+    width: 100% ;
+    margin-bottom: 0;
+    border: none!important;
+    border-radius: 0%;
+    border-bottom: 1px solid #22242a!important;
+    outline: none !important;
+    padding-left: 15px !important;
+}
+.signCheck{
+    margin: 2% 0;
+}
+.signdiv{
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-group {
+    z-index: 0 !important;
+  }
+  .bord{
+      border-radius: 0%;
+  }
+  .st{
+      background-color: black;
+      width: 100%;
+  }
+
+  *{
+    border-radius: 0px !important;
+  }
+  label
+  {
+    color: #22242a;
+  }

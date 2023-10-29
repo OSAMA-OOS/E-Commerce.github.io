@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bomdi.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <title>Pay Page</title>
+    <!-- <style>
+        .cardNum {
+            text-align: center;
+        }
+
+        #alert {
+            opacity: 0;
+            transition: .5s;
+            text-align: center;
+        }
+
+        #doneMsg {
+            opacity: 0;
+            transition: .5s;
+        }
+    </style> -->
+
+    <link rel="stylesheet" href="../css/paymentPage.css">
+
+
+</head>
+
+<body>
+
+    <!-- ========================   [ HEADER ] =========================================== -->
+    <div id="headerContainer" class="container-fluid" style="position: sticky; top: 0px; z-index: 1; background-color: white;">
+
+        <!-- first row on header [ banner ] -->
+        <div id="HeaderBanner" class="row bg-black text-white text-center p-2">
+            <div id="headerBannerContent" class="col-12 p-3">Content Banner</div>
+        </div>
+
+        <!-- Header Help section language and currency Section -->
+        <div id="headerHelp" class="row">
+            <div id="headerContent" class="col-12 d-flex justify-content-end">
+                <div id="headerContentHelp" class="btn">Help</div>
+                <div id="headerContentLocation" class="btn">Egypt</div>
+                <div id="headerContentCurrency" class="btn">EGP</div>
+                <div id="headerContentLanguage" class="btn">English</div>
+            </div>
+        </div>
+
+        <!-- Header Nav Bar Section -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary row" id="headerNavBar">
+            <div class="container-fluid ">
+
+                <!-- brand name -->
+                <a class="navbar-brand fs-1" href="../index.html">Peloton</a>
+
+
+                <!-- menu button that will appear in small width -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- this area collapse in small width and show menu button -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                                        <!-- search area and the search button -->
+                    <form class="d-flex ms-auto w-50" role="search">
+                        <input class="form-control me-3 " type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success nrmBrd" type="submit">Search</button>
+                    </form>
+
+
+                    <ul  class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        
+                        <li class="nav-item m-1" id="unLogged">
+                            <a  class="nav-link active" aria-current="page" href="#"><i class="fa-regular fa-user" style="color: #000000;"></i> Login</a>
+                        </li>
+                        <li class="nav-item m-1" id="logged">
+                            <a id="loggedLink" href="../html/accountPage.html" class="nav-link active" aria-current="page" href="../html/account.html">
+
+                                <!-- CODE MUST APPEAR HERE NEW PROFILE -->
+
+                            </a>
+                        </li>
+                        <li class="nav-item m-1">
+                            <a class="nav-link active" aria-current="page" href="#"><i class="fa-regular fa-heart" style="color: #000000;"></i> Favorite</a>
+                        </li>
+                        <li style="cursor: pointer;" id="headerShoppingCartButton" class="nav-item m-1 position-relative">
+                            <a  class="nav-link active" aria-current="page"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></i></i> Shopping Cart<span id="addToCartBadge"  class="bg-black text-white position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                                <span class="visually-hidden">unread messages</span></a>
+                            
+                        </li>
+            
+                    </ul>
+            </div>
+
+            </div>
+            </nav>
+        
+    </div>
+
+    <!-- Exit Mark -->
+    <div class="container">
+        <!-- Exit mark -->
+        <div class="row mb-4 mt-4 d-flex justify-content-end" style="background-color: rgb(247, 243, 243);">
+            <a id="exitMark" class=" border fs-4" href="cartPage.html">X</a>
+        </div>
+    </div>
+    <!-- ================================================================================== -->
+
+    <!-- Check Card -->
+    <section class="container my-  col-12 col-md-8 text-light p-3 lg">
+        <!-- <form class="row g-3"> -->
+
+
+
+
+        
+        <div class="col-md-12">
+
+            <!-- ------------------ [ Payment Page Body ] --------------------- -->
+            <div class="row mt-5 p-5 border rounded shadow mb-5 bg-body-tertiary ">
+
+
+                <!-- ------------------------ [ Form ] --------------------------- -->
+                <div class="col-12 col-xl-9">
+                    <div class="row g-3 align-items-end" id="formInputs">
+                        <!-- card name/////////////////////// -->
+
+                        <div class="col-md-12">
+                            <label class="form-label text-dark ms-2">Card Holder's Name :</label>
+                            <input type="text" class="form-control" placeholder="Name On Card" required id="cardName">
+                        </div>
+
+
+                        <!-- card number ////////////////////////// -->
+                        <label class="form-label text-dark ms-2">Card Number :</label>
+
+                        <div class="col-3 mt-0">
+                            <input type="text" class="form-control cardNum" id="firstFour" maxlength="4"
+                                placeholder="XXXX" required>
+
+                        </div>
+                        <div class="col-3 mt-0">
+                            <input type="text" class="form-control cardNum" id="secondFour" maxlength="4"
+                                placeholder="XXXX" required>
+
+                        </div>
+                        <div class="col-3 mt-0">
+                            <input type="text" class="form-control cardNum" id="thirdFour" maxlength="4"
+                                placeholder="XXXX" required>
+
+                        </div>
+                        <div class="col-3 mt-0">
+                            <input type="text" class="form-control cardNum" id="fourthFour" maxlength="4"
+                                placeholder="XXXX" required>
+                        </div>
+
+                        <!-- date and cvv//////////////////// -->
+
+                        <div class="col-6">
+                            <label class="form-label text-dark ms-2 ">Expiration Date</label>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label text-dark ms-2 ">CVV</label>
+                        </div>
+
+                        <div class="col-6 mt-0">
+                            <input type="text" class="form-control" id="expirationDate" maxlength="7"
+                                placeholder="MM/YYYY" required>
+
+                        </div>
+                        <div class="col-6 mt-0">
+                            <input type="text" class="form-control" id="cvv" maxlength="3" placeholder="Code : XXX"
+                                required>
+                        </div>
+
+                        <!--////////////// address//////////////////////////// -->
+                        <div class="col-8">
+                            <label class="form-label text-dark ms-2 ">Address :</label>
+                        </div>
+                        <div class="col-4">
+                            <label class="form-label text-dark  ">City :</label>
+                        </div>
+                        <div class="col-8 mt-0">
+                            <input type="text" class="form-control" id="expiratioDate" placeholder="Address In Detail"
+                                required>
+
+                        </div>
+                        <div class="col-4 mt-0">
+                            <input type="text" class="form-control" id="expiratioDate" placeholder="Your City" required>
+
+                        </div>
+
+
+                        <!--//////////////////////// total Amont//////////////////// -->
+
+                        <!-- <div class="col-4">
+                            <label class="form-label text-dark  ">Total Amount :</label>
+                            <label class="form-label text-dark  " id="labelForAmount"></label>
+                        </div> -->
+
+
+                        <!-- ///////Pay now button /////////////////////////////////// -->
+
+                        <div class="d-grid gap-1 col-12 mx-auto">
+
+                            <button class="btn btn-outline-dark mt-5" type="button" id="payBtn">Pay Now</button>
+                            <!-- <button class="btn btn-outline-dark btn-secondary   mt-5" type="button" id="payBtn">Pay Now</button> -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- temp used color #757672 -->
+                <!-- ------------------ [ Total Price ] ------------------ -->
+                <div id="totalPriceSection" class="col-12 col-xl-3 mt-4 container-fluid text-black" style="background-color: #f2f2f2;">
+
+                    <div id="ordersWord" class="row justify-content-start m-3">Orders</div>
+
+                    <!-- Selected Products -->
+                    <div id="productsContainer" class="row">
+
+
+                        <!-- Stamp for testing only -->
+                        <!-- <div id="cardContainer" class="card mb-3 w-100">
+                            <div class="row g-0"> 
+                                <div class="col-3">
+                                    <img src="https://picsum.photos/300/300" class="img-fluid rounded-start"  alt="...">
+                                </div>
+                                <div class="col-9 row">
+                                    <h5 class="card-text fs-6 col-12">iphone</h5>
+                                    <h5 class="card-text fs-6 col-12">990LE</h5> 
+                                </div>
+                            </div>
+                        </div> -->
+
+
+
+                        
+                    </div>
+
+                    
+                        <div class="container" id="checkDetails">
+
+                            <!-- shipping -->
+                            <div class="row">
+                                <div class="col-6">Shipping:</div>
+                                <div id="shipping" class="col-3">21</div>
+                                <div class="col-3">LE</div>
+                            </div>
+                            <!-- Fees -->
+                            <div class="row">
+                                <div class="col-6">Fees:</div>
+                                <div id="fees" class="col-3">0</div>
+                                <div class="col-3">LE</div>
+                            </div>
+                            <hr>
+                            <!-- Total  -->
+                            <div class="row">
+                                <div class="col-6">Total:</div>
+                                <div id="totalPrice" class="col-3">0</div>
+                                <div class="col-3">LE</div>
+                            </div>
+                        </div>
+
+                    
+
+                    </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- -------------------- [ Alert Section ] ----------------------- -->
+        <div class="alert alert-danger fixed-top h-auto p-3 fs-3" id="alert" role="alert">
+        </div>
+        <!-- payment done//////////////////////////// -->
+        <div class="alert alert-success fixed-top p-3 fs-5" id="doneMsg" role="alert">
+            <h4 class="alert-heading">Your order is procced..!</h4>
+            <p>you successfully read this important alert message. Thank you for dealing with us :)</p>
+            <!-- <hr> -->
+            <!-- <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p> -->
+        </div>
+        <!-- --------------------------------------------------------------- -->
+
+
+    </section>
+
+
+
+
+    <!-- ================================== [ FOOTER SECTION ] =========================== -->
+    <div class="container-fluid mt-5 w-100 bg-black">
+        <div class="row" style="width: 100%;">
+            <div class="container col-12 bg-black">
+                <div class="col-12 bg-black">
+        
+                <footer class="text-center text-lg-start text-white" style="background-color: #000">
+        
+                    <section class="d-flex justify-content-between p-4" style="background-color: #000">
+        
+                        <div class="me-5">
+                            <span>Get connected with us on social networks:</span>
+                        </div>
+        
+                        <div>
+                            <a href="" class="text-white me-4">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="" class="text-white me-4">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+        
+                    </section>
+        
+                    <section class="">
+                        <div class="container text-center text-md-start mt-5">
+        
+                            <div class="row mt-3">
+        
+                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        
+                                    <h6 class="text-uppercase fw-bold">Peloton</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #000; height: 2px" />
+                                    <p>
+                                        Online shopping is one of the most convenient and easy modes of shopping as users can
+                                        browse and choose products from a wide range without having to go to physical stores.
+                                    </p>
+                                </div>
+        
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        
+                                    <h6 class="text-uppercase fw-bold">Categories</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #000; height: 2px" />
+                                    <p>
+                                        <a href="#!" class="text-white">Smart Phone</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Laptops</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Fragrances</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Skincare</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Home Decoration</a>
+                                    </p>
+                                </div>
+        
+                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        
+                                    <h6 class="text-uppercase fw-bold">Useful links</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #000; height: 2px" />
+                                    <p>
+                                        <a href="#!" class="text-white">Your Account</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Become an Affiliate</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Shipping Rates</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">About us</a>
+                                    </p>
+                                    <p>
+                                        <a href="#!" class="text-white">Help</a>
+                                    </p>
+                                </div>
+        
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        
+                                    <h6 class="text-uppercase fw-bold">Contact</h6>
+                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; background-color: #000; height: 2px" />
+        
+                                    <p><i class="fas fa-envelope mr-3"></i> Peloton@gmail.com</p>
+                                    <p><i class="fas fa-phone mr-3"></i> + 01271927950</p>
+                                    <p><i class="fas fa-print mr-3"></i> + 01271927950</p>
+                                </div>
+        
+                            </div>
+        
+                        </div>
+                    </section>
+        
+                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                        © 2023 Copyright:
+                        <a class="text-white" href="">Peloton.com</a>
+                    </div>
+                </footer>
+            </div>
+    </div>
+        </div>
+    </div>
+    <!-- ================================================================================= -->
+
+
+    
+    <script src="../js/paymentPage.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<!-- <script src="/js/all.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script> -->
